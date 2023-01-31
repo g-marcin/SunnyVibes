@@ -1,0 +1,364 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+p {
+  text-align: justify;
+}
+
+p::first-letter {
+  color: orange;
+}
+
+::selection {
+  background: orange;
+}
+
+hr {
+  z-index: -1;
+}
+body {
+  background: lightgray;
+  padding: 2px;
+}
+
+#main_wrapper {
+  background: rgb(255, 255, 255);
+  margin: 5px 20px;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+div {
+  
+  padding-left: 10px;
+}
+
+ul > div {
+  background: red;
+  width: fit-content;
+  margin: 0;
+  padding: 0;
+  display: inline;
+}
+
+header {
+  position: sticky;
+  top: 0px;
+  right: 0px;
+  z-index: 2;
+  text-align: center;
+}
+#menu {
+  background: #a8d3f8;
+  border-radius: 15px;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100px;
+  z-index: 3;
+  margin: 0;
+
+  border: 1px solid rgb(0, 0, 0, 0.2);
+  flex-direction: row;
+}
+
+#logo-text {
+  color: black;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 24px;
+  font-weight: 700;
+  align-self: center;
+}
+#logo {
+  display: flex;
+
+  align-content: center;
+}
+
+ul {
+  vertical-align: middle;
+  margin: 4px;
+}
+
+li {
+  display: inline;
+
+  text-align: center;
+  margin: 0;
+  flex-basis: 50px;
+}
+li > a {
+  background: whitesmoke;
+  border: 1px solid steelblue;
+  border-radius: 8px;
+  text-decoration: none;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 5px;
+  height: fit-content;
+  font-size: 24px;
+  margin: 5px;
+}
+
+li > a:link {
+  text-decoration: none;
+  color: darkred;
+}
+
+li > a:visited {
+  color: brown;
+}
+
+li > a:hover {
+  background: cornflowerblue;
+  color: rgb(255, 165, 38);
+}
+
+li > a:active {
+  color: violet;
+}
+
+@media (max-width: 700px) {
+  section {
+    flex-direction: column;
+  }
+  .area {
+    flex-basis: 100%;
+    font-size: small;
+  }
+  li > a {
+    visibility: collapse;
+    width: max-content;
+  }
+  .topnav {
+    visibility: visible;
+    margin-left: 15px;
+    z-index: 2;
+  }
+  #top-menu-blocks {
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+    overflow: hidden;
+  }
+  #logo-text {
+    color: black;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    font-size: 18px;
+    font-weight: 700;
+    align-self: center;
+  }
+  #menu {
+    margin-left: 0;
+    padding: 0;
+  }
+}
+@media (min-width: 700px) {
+  .topnav {
+    visibility: hidden;
+    margin-left: auto;
+    z-index: 2;
+  }
+}
+
+section {
+  display: flex;
+  padding: 10px;
+  height: fit-content;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  z-index: 1;
+}
+
+#carouselExampleControls {
+  max-width: 500px;
+  max-height: 500px;
+  padding: 0;
+  text-align: center;
+  z-index: 1;
+}
+
+.carousel-item {
+  left: -20px;
+  width: 500px;
+}
+
+section.form {
+  padding: 10% 10%;
+}
+input {
+  display: flexbox;
+}
+
+.area {
+  margin: 2px;
+  border-radius: 15px;
+  max-height: fit-content;
+  background: aliceblue;
+  padding: 10px;
+  flex-basis: content;
+  height: 1000px;
+  border: 1px solid rgb(0, 0, 0, 0.2);
+}
+
+.area#left,
+.area#right {
+  background: #a8d3f8;
+}
+
+iframe {
+  width: 100%;
+  height: 1000px;
+}
+
+#left {
+  width: 20%;
+}
+
+form {
+  border: 1px solid black;
+  border-radius: 12px;
+  background: #a8d3f8;
+  text-align: center;
+
+  max-width: fit-content;
+}
+
+form h3 {
+  margin: 2px;
+  text-align: center;
+}
+
+input,
+select {
+  text-align: left;
+  padding: 10px;
+  background: aliceblue;
+  border-radius: 5px;
+  border-bottom: 1px solid ghostwhite;
+}
+
+#sbm {
+  width: 100%;
+  text-align: center;
+  background: black;
+  color: white;
+  font-size: 24px;
+  padding: 5px;
+}
+
+#center {
+  flex-basis: 60%;
+  padding: 5px;
+  flex-grow: 3;
+  text-align: justify;
+  height: fit-content;
+
+  margin: 1px;
+}
+
+#right {
+  text-align: center;
+  flex-basis: 20%;
+  flex-grow: 1;
+}
+
+#left {
+  flex-basis: 20%;
+  text-align: center;
+  flex-grow: 1;
+  width: 100%;
+}
+
+footer {
+  text-align: center;
+  background: rgb(168, 211, 248);
+  border-radius: 15px;
+  padding: 10px;
+  min-height: 50px;
+}
+
+#ankieta {
+  display: block;
+  text-align: left;
+}
+
+#selection {
+  text-align: left;
+  padding: 5px;
+}
+
+.sideBlock {
+  border: 1px solid orange;
+  border-radius: 10px;
+
+  background: aliceblue;
+  margin: 5px;
+  padding: 10px;
+}
+
+input {
+  border: 1px solid black;
+}
+select {
+  border: 1px solid black;
+}
+
+.title {
+  text-align: center;
+}
+
+/* Style the navigation menu */
+.topnav {
+  overflow: hidden;
+
+  position: relative;
+  opacity: 0.5;
+  justify-self: right;
+}
+
+/* Hide the links inside the navigation menu (except for logo/home) */
+.topnav #myLinks {
+  display: none;
+}
+
+/* Style navigation menu links */
+.topnav a {
+  color: black;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+  border-radius: 15px;
+  margin-left: auto;
+}
+
+/* Style the hamburger menu */
+.topnav a.icon {
+  background: #0066ff;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  opacity: 0.5;
+}
+
+/* Add a grey background color on mouse-over */
+.topnav a:hover {
+  background-color: aliceblue;
+  color: black;
+}
+
+/* Style the active link (or home/logo) */
+.active {
+  background-color: rgba(0, 136, 255, 0.97);
+  color: rgb(0, 38, 255);
+  max-width: fit-content;
+}
