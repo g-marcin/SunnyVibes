@@ -25,7 +25,6 @@ body {
 
 #main_wrapper {
   background: rgb(255, 255, 255);
-  margin: 5px 20px;
   border-radius: 10px;
   padding: 10px;
   text-align: center;
@@ -42,31 +41,25 @@ div {
 ul > div {
   background: red;
   width: fit-content;
-  margin: 0;
-  padding: 0;
+  
   display: inline;
 }
 
 header {
   position: sticky;
-  top: 0px;
-  right: 0px;
   z-index: 2;
-  text-align: center;
+  
+ 
 }
 #menu {
   background: #a8d3f8;
   border-radius: 15px;
-
-  display: flex;
-  justify-content: flex-start;
+  display:grid;
   align-items: center;
-  min-height: 100px;
+  grid-template-columns: 1fr 3fr;
+  padding: 10px;
   z-index: 3;
-  margin: 0;
-
   border: 1px solid rgb(0, 0, 0, 0.2);
-  flex-direction: row;
 }
 
 #logo-text {
@@ -78,8 +71,7 @@ header {
 }
 #logo {
   display: flex;
-
-  align-content: center;
+  grid-column: 1/2;
 }
 
 ul {
@@ -124,6 +116,10 @@ li > a:active {
   color: violet;
 }
 
+#top-menu-blocks{
+  grid-column: 2/3;
+}
+
 @media (max-width: 700px) {
   section {
     flex-direction: column;
@@ -140,12 +136,14 @@ li > a:active {
     visibility: visible;
     margin-left: 15px;
     z-index: 2;
+    grid-column: 2/3;
+    
   }
   #top-menu-blocks {
-    margin: 0;
-    padding: 0;
+    
     z-index: 1;
     overflow: hidden;
+    display: none;
   }
   #logo-text {
     color: black;
@@ -168,9 +166,7 @@ li > a:active {
 }
 
 section {
-  display: flex;
   padding: 10px;
-  height: fit-content;
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-around;
